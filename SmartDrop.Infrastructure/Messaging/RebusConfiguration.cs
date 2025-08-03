@@ -4,6 +4,7 @@ using Rebus.Persistence.InMem;
 using Rebus.Routing.TypeBased;
 using SmartDrop.Infrastructure.Messaging.Messages;
 namespace SmartDrop.Infrastructure.Messaging;
+
 public static class RebusConfiguration
 {
     public static IServiceCollection AddRebusMessaging(this IServiceCollection services)
@@ -14,7 +15,6 @@ public static class RebusConfiguration
             .Sagas(s => s.StoreInMemory()) 
             .Options(o =>
             {
-                o.EnableSagas();
                 o.SetNumberOfWorkers(1);
                 o.SetMaxParallelism(1);
             }));
