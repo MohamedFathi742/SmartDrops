@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartDrop.Infrastructure.Messaging.Messages;
-public class DropAssignedEvent
+public class DropCompletedEvent
 {
-    public string VehicleId { get; set; }
-    public List<string> DropIds { get; set; }
-
+    public Guid RequestId { get; set; }
 }

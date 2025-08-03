@@ -9,7 +9,6 @@ namespace SmartDrop.Infrastructure.Messaging.Sage;
 public class DropAssignmentSagaData : SagaData
 {
     public Guid RequestId { get; set; }
+    public bool IsAssigned { get; set; }
     public bool IsCompleted { get; set; }
-
-  
 }
